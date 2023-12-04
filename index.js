@@ -48,8 +48,8 @@ class Room {
 
     }
 
-    isOccupied(date){
-        
+    totalOccupancyPercentage(rooms, startDate, endDate) {
+        //
     }
     
 }
