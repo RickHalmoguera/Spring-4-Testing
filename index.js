@@ -20,6 +20,10 @@ class Room {
             return checkInDate <= inputDate && inputDate <= checkOutDate
         })
     }
+
+    occupancyPercentage(startDate, endDate){
+        
+    }
     
 }
 
