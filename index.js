@@ -1,10 +1,10 @@
 const rooms = require('./JSON/rooms.json')
 class Room {
-    constructor(name, rate, discount,booking) {
-        this.name = name; // Deluxe A
-        this.rate = rate;  //200
-        this.discount = discount; //20%
-        this.bookings = booking;  
+    constructor(name, rate, discount,bookings) {
+        this.name = name; 
+        this.rate = rate;  
+        this.discount = discount; 
+        this.bookings = bookings;  
     }
 
     isOccupied(date) {
