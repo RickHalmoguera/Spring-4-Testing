@@ -26,8 +26,3 @@ class Booking {
 }
 
 
-const room1= new Room("suite",150,8)
-
-const booking1= new Booking("Ricardo","ricardo@ricardo.com", new Date(2023,12,12), new Date(2024,1,1),rooms[2], 10)
-
-console.log(booking1)
