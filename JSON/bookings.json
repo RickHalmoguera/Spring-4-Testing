@@ -2,70 +2,70 @@
     {
       "name": "Ricardo",
       "email": "ricardo@example.com",
-      "checkin": "10/01/2023",
+      "checkIn": "10/01/2023",
       "checkOut": "12/01/2023",
       "discount": 10
     },
     {
       "name": "María",
       "email": "maria@example.com",
-      "checkin": "15/02/2023",
+      "checkIn": "15/02/2023",
       "checkOut": "20/02/2023",
       "discount": 5
     },
     {
       "name": "Juan",
       "email": "juan@example.com",
-      "checkin": "01/03/2023",
+      "checkIn": "01/03/2023",
       "checkOut": "05/03/2023",
       "discount": 15
     },
     {
       "name": "Laura",
       "email": "laura@example.com",
-      "checkin": "10/04/2023",
+      "checkIn": "10/04/2023",
       "checkOut": "15/04/2023",
       "discount": 8
     },
     {
       "name": "Carlos",
       "email": "carlos@example.com",
-      "checkin": "20/05/2023",
+      "checkIn": "20/05/2023",
       "checkOut": "25/05/2023",
       "discount": 12
     },
     {
       "name": "Ana",
       "email": "ana@example.com",
-      "checkin": "05/06/2023",
+      "checkIn": "05/06/2023",
       "checkOut": "10/06/2023",
       "discount": 20
     },
     {
       "name": "Miguel",
       "email": "miguel@example.com",
-      "checkin": "15/07/2023",
+      "checkIn": "15/07/2023",
       "checkOut": "20/07/2023",
       "discount": 7
     },
     {
       "name": "Sofía",
       "email": "sofia@example.com",
-      "checkin": "01/08/2023",
+      "checkIn": "01/08/2023",
       "checkOut": "05/08/2023",
       "discount": 18
     },
     {
       "name": "Eduardo",
       "email": "eduardo@example.com",
-      "checkin": "10/09/2023",
+      "checkIn": "10/09/2023",
       "checkOut": "15/09/2023",
       "discount": 14
     },
     {
       "name": "Isabel",
       "email": "isabel@example.com",
-      "checkin": "20/10/2023",
+      "checkIn": "20/10/2023",
       "checkOut": "25/10/2023",
       "discount": 9
     }
