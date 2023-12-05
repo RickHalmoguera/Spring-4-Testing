@@ -14,9 +14,7 @@ class Room {
         const checkInDateFormatted= new Date(Date.UTC(checkInYear, checkInMonth -1,checkInDay))
         const checkOutDateFormatted= new Date(Date.UTC(checkOutYear, checkOutMonth -1,checkOutDay))
 
-        
         return inputDate >= checkInDateFormatted && inputDate <= checkOutDateFormatted
-
     }
     
     
@@ -24,8 +22,9 @@ class Room {
     occupancyPercentage(startDate, endDate) {
         const [startDateDay, startDateMonth, startDateYear] = startDate.split('/').map(Number);
         const [endDateDay, endDateMonth, endDateYear] = endDate.split('/').map(Number);
-        const startDateFormatted = new Date(startDateYear, startDateMonth - 1, startDateDay);
-        const endDateFormatted = new Date(endDateYear, endDateMonth - 1, endDateDay);
+
+        const startDateFormatted = new Date(Date.UTC(startDateYear, startDateMonth - 1, startDateDay));
+        const endDateFormatted = new Date(Date.UTC(endDateYear, endDateMonth - 1, endDateDay));
         const totalDays = (endDateFormatted - startDateFormatted) / (1000 * 60 * 60 * 24) + 1;
         let roomOccupiedDays = 0;
 
@@ -33,8 +32,8 @@ class Room {
             const [checkInDay, checkInMonth, checkInYear] = booking.checkIn.split('/').map(Number);
             const [checkOutDay, checkOutMonth, checkOutYear] = booking.checkOut.split('/').map(Number);
 
-            const checkInDate = new Date(checkInYear, checkInMonth - 1, checkInDay);
-            const checkOutDate = new Date(checkOutYear, checkOutMonth - 1, checkOutDay);
+            const checkInDate = new Date(Date.UTC(checkInYear, checkInMonth - 1, checkInDay));
+            const checkOutDate = new Date(Date.UTC(checkOutYear, checkOutMonth - 1, checkOutDay));
 
             if (checkInDate <= endDateFormatted && checkOutDate >= startDateFormatted) {
                 const overlapStartDate = Math.max(startDateFormatted, checkInDate);

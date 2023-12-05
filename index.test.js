@@ -38,8 +38,8 @@ describe ('Check the room occupancy on a specific date', ()=>{
 
 })
 
-/*
-describe ('Check the percentage of room occupancy on a specific date', ()=>{
+
+describe ('Check the percentage of room occupancy on a specific range', ()=>{
     test('Check the percentage of occupancy between 01/01/2022 and 31/12/2022 of the Room 0', ()=>{
         const room1 = new Room(roomsList[0].name,[...bookingsList], roomsList[0].rate, roomsList[0].discount )
         expect(room1.occupancyPercentage("01/01/2022","31/12/2022")).toBe(0)
@@ -50,7 +50,7 @@ describe ('Check the percentage of room occupancy on a specific date', ()=>{
         expect(room1.occupancyPercentage("01/01/2023","31/12/2023")).toBeGreaterThan(0)
     })
 })
-
+/*
 describe('Check the total occupancy of the hotel in a time period', ()=>{
     test('Check the percentage of the occupancy between 01/01/2022 and 31/12/2022 of the whole hotel',()=>{
         const rooms = 
