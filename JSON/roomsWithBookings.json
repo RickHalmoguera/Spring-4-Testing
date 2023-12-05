@@ -1,0 +1,115 @@
+[
+    {
+      "name": "habitacion1",
+      "rate": 1524,
+      "discount": 14,
+      "bookings": [
+        {
+          "name": "Cliente67",
+          "email": "cliente67@example.com",
+          "checkIn": "09/09/2023",
+          "checkOut": "16/09/2023",
+          "discount": 6
+        }
+      ]
+    },
+    {
+      "name": "habitacion2",
+      "rate": 1674,
+      "discount": 9,
+      "bookings": [
+        {
+          "name": "Cliente48",
+          "email": "cliente48@example.com",
+          "checkIn": "20/05/2023",
+          "checkOut": "26/05/2023",
+          "discount": 13
+        },
+        {
+          "name": "Cliente22",
+          "email": "cliente22@example.com",
+          "checkIn": "04/01/2023",
+          "checkOut": "10/01/2023",
+          "discount": 10
+        }
+      ]
+    },
+    {
+      "name": "habitacion3",
+      "rate": 1783,
+      "discount": 15,
+      "bookings": [
+        {
+          "name": "Cliente79",
+          "email": "cliente79@example.com",
+          "checkIn": "03/11/2023",
+          "checkOut": "10/11/2023",
+          "discount": 8
+        },
+        {
+          "name": "Cliente94",
+          "email": "cliente94@example.com",
+          "checkIn": "14/02/2023",
+          "checkOut": "20/02/2023",
+          "discount": 12
+        },
+        {
+          "name": "Cliente9",
+          "email": "cliente9@example.com",
+          "checkIn": "21/06/2023",
+          "checkOut": "27/06/2023",
+          "discount": 8
+        }
+      ]
+    },
+    {
+      "name": "habitacion4",
+      "rate": 1119,
+      "discount": 14,
+      "bookings": [
+        {
+          "name": "Cliente4",
+          "email": "cliente4@example.com",
+          "checkIn": "16/07/2023",
+          "checkOut": "25/07/2023",
+          "discount": 11
+        },
+        {
+          "name": "Cliente58",
+          "email": "cliente58@example.com",
+          "checkIn": "02/09/2023",
+          "checkOut": "10/09/2023",
+          "discount": 12
+        }
+      ]
+    },
+    {
+      "name": "habitacion5",
+      "rate": 1344,
+      "discount": 11,
+      "bookings": [
+        {
+          "name": "Cliente51",
+          "email": "cliente51@example.com",
+          "checkIn": "03/04/2023",
+          "checkOut": "08/04/2023",
+          "discount": 6
+        },
+        {
+          "name": "Cliente33",
+          "email": "cliente33@example.com",
+          "checkIn": "12/10/2023",
+          "checkOut": "19/10/2023",
+          "discount": 9
+        },
+        {
+          "name": "Cliente82",
+          "email": "cliente82@example.com",
+          "checkIn": "05/12/2023",
+          "checkOut": "13/12/2023",
+          "discount": 7
+        }
+      ]
+    }
+  ]
+  

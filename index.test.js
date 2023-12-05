@@ -50,10 +50,17 @@ describe ('Check the percentage of room occupancy on a specific range', ()=>{
         expect(room1.occupancyPercentage("01/01/2023","31/12/2023")).toBeGreaterThan(0)
     })
 })
-/*
+
 describe('Check the total occupancy of the hotel in a time period', ()=>{
     test('Check the percentage of the occupancy between 01/01/2022 and 31/12/2022 of the whole hotel',()=>{
-        const rooms = 
+       const rooms =[
+        {
+            name: "suite",
+            rate: 1500,
+            discount: 8,
+            bookings:[]
+        }
+       ]
         expect(Room.totalOccupancyPercentage(roomsList,"01/01/2022","31/12/2022")).toBe(0)
     })
 })
@@ -61,7 +68,7 @@ describe('Check the total occupancy of the hotel in a time period', ()=>{
 
 
 describe('Check fee ',()=>{
-    test('Check that room 0 have a total fee of ',()=>{
+    test('Check that room 0 have a total fee of 12.42 ',()=>{
         const booking1= new Booking(
             bookingsList[0].name, 
             bookingsList[0].email, 
@@ -72,4 +79,4 @@ describe('Check fee ',()=>{
         )
         expect(booking1.getFee(booking1.rooms.rate, booking1.rooms.discount, booking1.discount)).toBe(12.42)
     })
-})*/
+})
