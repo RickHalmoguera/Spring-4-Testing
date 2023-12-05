@@ -1,7 +1,7 @@
 const { Room, Booking } = require('./index')
 const roomsList = require('./JSON/rooms.json')
 const bookingsList = require('./JSON/bookings.json')
-
+const roomsWithBookings = require('./JSON/roomsWithBookings.json')
 
 describe ('Check the room occupancy on a specific date', ()=>{
     
@@ -53,15 +53,13 @@ describe ('Check the percentage of room occupancy on a specific range', ()=>{
 
 describe('Check the total occupancy of the hotel in a time period', ()=>{
     test('Check the percentage of the occupancy between 01/01/2022 and 31/12/2022 of the whole hotel',()=>{
-       const rooms =[
-        {
-            name: "suite",
-            rate: 1500,
-            discount: 8,
-            bookings:[]
-        }
-       ]
-        expect(Room.totalOccupancyPercentage(roomsList,"01/01/2022","31/12/2022")).toBe(0)
+    
+        expect(Room.totalOccupancyPercentage(roomsWithBookings,"01/0/2022","31/12/2022")).toBe(0)
+    })
+
+    test('Check the percentage of the occupancy between 01/01/2023 and 31/12/2023 of the whole hotel',()=>{
+    
+        expect(Room.totalOccupancyPercentage(roomsWithBookings,"01/01/2023","31/12/2023")).toBeGreaterThan(0)
     })
 })
 
