@@ -66,8 +66,13 @@ describe ('Check the percentage of room occupancy on a specific range', ()=>{
     })
 
     test('Check the percentage of occupancy between 01/01/2023 and 31/12/2023 of the Room 0', ()=>{
-        const room1 = new Room(roomsList[0].name,[...bookingsList], roomsList[0].rate, roomsList[0].discount)
-        expect(room1.occupancyPercentage("01/01/2023","31/12/2023")).toBeGreaterThan(0)
+        const room1 = new Room(roomsList[0].name,[bookingsList[0],bookingsList[1]], roomsList[0].rate, roomsList[0].discount)
+        expect(room1.occupancyPercentage("01/01/2023","31/12/2023")).toBe(2.47)
+    })
+
+    test('Check the percentage of occupancy between 10/01/2023 and 12/01/2023 of the Room 0', ()=>{
+        const room1 = new Room(roomsList[0].name,[bookingsList[0],bookingsList[1]], roomsList[0].rate, roomsList[0].discount)
+        expect(room1.occupancyPercentage("10/01/2023","12/01/2023")).toBe(100)
     })
 })
 

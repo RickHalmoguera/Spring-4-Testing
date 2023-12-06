@@ -43,7 +43,8 @@ class Room {
             }
         })
 
-        return  (daysOccupied * 100) / totalDays;
+        const percentage =((daysOccupied * 100) / totalDays).toFixed(2)
+        return  Number(percentage)
     }
 
     static totalOccupancyPercentage(rooms, startDate, endDate) {
