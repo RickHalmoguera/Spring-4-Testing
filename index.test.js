@@ -84,7 +84,42 @@ describe('Check the total occupancy of the hotel in a time period', ()=>{
 
     test('Check the percentage of the occupancy between 01/01/2023 and 31/12/2023 of the whole hotel',()=>{
     
-        expect(Room.totalOccupancyPercentage(roomsWithBookings,"01/01/2023","31/12/2023")).toBeGreaterThan(0)
+        expect(Room.totalOccupancyPercentage(roomsWithBookings,"01/01/2023","31/12/2023")).toBe(4.71)
+    })
+
+    test('Check the percentage of the occupancy between 09/09/2023 and 16/09/2023 of the whole hotel',()=>{
+        
+        const rooms100 =[
+            {
+              "name": "habitacion1",
+              "rate": 1524,
+              "discount": 14,
+              "bookings": [
+                {
+                  "name": "Cliente67",
+                  "email": "cliente67@example.com",
+                  "checkIn": "09/09/2023",
+                  "checkOut": "16/09/2023",
+                  "discount": 6
+                }
+              ]
+            },
+            {
+                "name": "habitacion2",
+                "rate": 1524,
+                "discount": 14,
+                "bookings": [
+                  {
+                    "name": "Cliente67",
+                    "email": "cliente67@example.com",
+                    "checkIn": "09/09/2023",
+                    "checkOut": "16/09/2023",
+                    "discount": 6
+                  }
+                ]
+              }
+            ]
+        expect(Room.totalOccupancyPercentage(rooms100,"09/09/2023","16/09/2023")).toBe(100)
     })
 })
 /*
