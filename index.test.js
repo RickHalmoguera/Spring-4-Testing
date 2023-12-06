@@ -204,6 +204,6 @@ describe('Check fee ',()=>{
             bookingsList[0].discount,
             roomsList[0]
         )
-        expect(booking1.getFee(booking1.rooms.rate, booking1.rooms.discount, booking1.discount)).toBe(12.42)
+        expect(booking1.getFee(booking1.rooms.rate, booking1.rooms.discount, booking1.discount)).toBe(1242)
     })
 })

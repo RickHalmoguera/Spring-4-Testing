@@ -115,8 +115,7 @@ class Booking {
     }
 
     getFee(rate,roomDiscount,bookingDiscount){
-        const rateInEuros = rate/100
-        const rateRoom = rateInEuros -(rateInEuros*roomDiscount/100)
+        const rateRoom = rate -(rate*roomDiscount/100)
         const fullFee = rateRoom - ( rateRoom*bookingDiscount/100)
         return Number(fullFee.toFixed(2))
     }
