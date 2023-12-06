@@ -41,7 +41,7 @@ class Room {
                 const days = (overlapEndDate - overlapStartDate) / (1000 * 60 * 60 * 24) + 1
              daysOccupied += days;
             }
-        });
+        })
 
         return  (daysOccupied * 100) / totalDays;
     }
@@ -77,6 +77,28 @@ class Room {
 
         return Number(percentange)
        
+    }
+
+    static availableRooms(rooms, startDate, endDate){
+        const [startDateDay, startDateMonth, startDateYear] = startDate.split('/').map(Number)
+        const [endDateDay, endDateMonth, endDateYear] = endDate.split('/').map(Number)
+        const startDateFormatted = new Date(Date.UTC(startDateYear, startDateMonth - 1, startDateDay))
+        const endDateFormatted = new Date(Date.UTC(endDateYear, endDateMonth - 1, endDateDay))
+        let availableRooms = []
+        rooms.forEach(room =>{
+            room.bookings.forEach(booking => {
+                const [checkInDay, checkInMonth, checkInYear] = booking.checkIn.split('/').map(Number)
+                const [checkOutDay, checkOutMonth, checkOutYear] = booking.checkOut.split('/').map(Number)
+    
+                const checkInDate = new Date(Date.UTC(checkInYear, checkInMonth - 1, checkInDay))
+                const checkOutDate = new Date(Date.UTC(checkOutYear, checkOutMonth - 1, checkOutDay))
+    
+                if (checkInDate >= endDateFormatted && checkOutDate <= startDateFormatted) {
+                    availableRooms.push(room)
+                }
+            })
+        })
+        return availableRooms
     }
     
 }
