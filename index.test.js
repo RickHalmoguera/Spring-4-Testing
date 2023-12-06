@@ -122,10 +122,77 @@ describe('Check the total occupancy of the hotel in a time period', ()=>{
         expect(Room.totalOccupancyPercentage(rooms100,"09/09/2023","16/09/2023")).toBe(100)
     })
 })
-/*
-describe('Check the availables rooms between 01/01/2022 and 31/12/2023', ()=>{
-    expect(Room.availableRooms(roomsWithBookings,"01/01/2022", "31/12/2022")).toBe(5)
-})*/
+
+describe('Check the availables rooms between in an specific range', ()=>{
+    test('Check the availables rooms between 01/01/2022 and 31/12/2022 ',()=>{
+
+        const rooms100 =[
+            {
+                "name": "habitacion1",
+                "rate": 1524,
+                "discount": 14,
+                "bookings": [
+                    {
+                        "name": "Cliente67",
+                        "email": "cliente67@example.com",
+                        "checkIn": "09/09/2023",
+                        "checkOut": "16/09/2023",
+                        "discount": 6
+                    }
+                ]
+            },
+            {
+                "name": "habitacion2",
+                "rate": 1524,
+                "discount": 14,
+                "bookings": [
+                    {
+                        "name": "Cliente67",
+                        "email": "cliente67@example.com",
+                        "checkIn": "09/09/2023",
+                        "checkOut": "16/09/2023",
+                        "discount": 6
+                    }
+                ]
+            }
+        ]
+        expect(Room.availableRooms(rooms100,"01/01/2022", "31/12/2022")).toBe(2)
+    })
+    test('Check the availables rooms between 09/09/2023 and 16/09/2023 ',()=>{
+
+        const rooms100 =[
+            {
+                "name": "habitacion1",
+                "rate": 1524,
+                "discount": 14,
+                "bookings": [
+                    {
+                        "name": "Cliente67",
+                        "email": "cliente67@example.com",
+                        "checkIn": "09/09/2023",
+                        "checkOut": "16/09/2023",
+                        "discount": 6
+                    }
+                ]
+            },
+            {
+                "name": "habitacion2",
+                "rate": 1524,
+                "discount": 14,
+                "bookings": [
+                    {
+                        "name": "Cliente67",
+                        "email": "cliente67@example.com",
+                        "checkIn": "09/09/2023",
+                        "checkOut": "16/09/2023",
+                        "discount": 6
+                    }
+                ]
+            }
+        ]
+        expect(Room.availableRooms(rooms100,"09/09/2023", "16/09/2023")).toBe(0)
+    })
+})
 
 describe('Check fee ',()=>{
     test('Check that room 0 have a total fee of 12.42 ',()=>{

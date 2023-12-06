@@ -94,12 +94,12 @@ class Room {
                 const checkInDate = new Date(Date.UTC(checkInYear, checkInMonth - 1, checkInDay))
                 const checkOutDate = new Date(Date.UTC(checkOutYear, checkOutMonth - 1, checkOutDay))
     
-                if (checkInDate >= endDateFormatted && checkOutDate <= startDateFormatted) {
-                    availableRooms.push(room)
+                if (checkInDate >= endDateFormatted || checkOutDate <= startDateFormatted) {
+                    availableRooms.push(room);
                 }
             })
         })
-        return availableRooms
+        return availableRooms.length
     }
     
 }
